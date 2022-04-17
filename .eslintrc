@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "env": {
+    "browser": true
+  },
+  "extends": "standard",
+  "rules": {
+    "comma-dangle": [2, "always-multiline"],
+    "no-unused-vars": "off"
+  }
+}
