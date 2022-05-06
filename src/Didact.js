@@ -75,7 +75,7 @@ function updateDom (dom, prevProps, nextProps) {
 }
 
 const commitRoot = () => {
-  console.log('commitRoot')
+  console.log('commitRoot', wipRoot)
   deletions.forEach(commitWork)
   commitWork(wipRoot.child)
   currentRoot = wipRoot
@@ -123,7 +123,7 @@ function render (element, container) {
 
 let nextUnitOfWork = null
 let currentRoot = null
-let wipRoot = null
+let wipRoot = null // we're gonna keep the entire tree in memory and we're gonna mutate that a lot to keep track of the state
 let deletions = null
 
 function workLoop (deadline) {
